@@ -1,1 +1,2 @@
-<favorite [is-favorite]="post.isFavorite" [x] = "post" (change)=onFavoriteChange($event)></favorite>
+<favorite [is-liked]="post.isLiked"   [count-likes]="post.countLikes" (change)=onFavoriteChange($event)></favorite>
+<!-- [x] = "post" -->

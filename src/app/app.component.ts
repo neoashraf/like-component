@@ -8,15 +8,21 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
+  
+  // post = [{
+  //   itemName : "Razor Blade",
+  //   isFavorite : false,
+  // }]
+
   post = [{
-    itemName : "Razor Blade",
-    isFavorite : false,
+    isLiked : false,
+    countLikes : 0
   }]
   // type anotation for compile time checking.
   // we can use inline anotation  (eventArgs:{neewValue : boolean}) 
   // or interface (it is in the component from where the event is raised and we import that)
   onFavoriteChange(favchangedEventArgs){
-    console.log("Favorite Changed",favchangedEventArgs);
+    console.log("Like Status Changed",favchangedEventArgs);
   }
 
 }
