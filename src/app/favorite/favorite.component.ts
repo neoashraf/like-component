@@ -12,14 +12,16 @@ export interface favchangedEventArgs{
 
 export class FavoriteComponent implements OnInit {
   
-  @Input('is-favorite') isSelected : boolean;
+  @Input('is-favorite') isSelected : boolean ;
+  @Input() x : any ;
   @Output('change') click = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
 
   }
+
   onClick() { 
     this.isSelected = !this.isSelected;
     this.click.emit({newValue : this.isSelected});   // We are using interace for  type-anotation. Interface is on top.
